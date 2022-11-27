@@ -10,7 +10,7 @@ import javax.persistence.*;
 public class Course {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //primary key will be created automatically
     @Column(name = "id")
     private Long id;
 
