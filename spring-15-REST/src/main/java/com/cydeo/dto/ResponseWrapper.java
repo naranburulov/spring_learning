@@ -16,6 +16,7 @@ public class ResponseWrapper {          //a template to see as an outcome in API
     private Integer code;
     private Object data;        //to cover any dto, which might be needed
 
+
     public ResponseWrapper(String message, Object data){
         this.message = message;
         this.data = data;
