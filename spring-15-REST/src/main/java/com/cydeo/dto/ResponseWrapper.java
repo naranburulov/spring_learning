@@ -1,8 +1,14 @@
 package com.cydeo.dto;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.aspectj.bridge.IMessage;
 import org.springframework.http.HttpStatus;
 
+@Getter
+@Setter
+@NoArgsConstructor
 public class ResponseWrapper {          //a template to see as an outcome in API (json)
 
     private boolean success;
