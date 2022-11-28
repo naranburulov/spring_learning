@@ -13,8 +13,10 @@ public class Spring17RestConsumingApisApplication {
     }
 
     @Bean
-    public RestTemplate restTemplate(){
+    public RestTemplate restTemplate(){         //one of the ways to consume api by Rest Template (soon to be depreciated - dinosaur)
         return new RestTemplate();
     }
+    //next, use DTOs (here is a nice tool to do that faster:  https://www.jsonschema2pojo.org/    )
+
 
 }
