@@ -25,8 +25,10 @@ public class CalculatorParameterizedTest {
         Assertions.assertFalse(arg.isEmpty());
     }
 
+
+
     @ParameterizedTest
-    @MethodSource("stringProvider")
+    @MethodSource("stringProvider")                 //if it is located in dif class -> @MethodSource("ClassName#stringProvider")
     void testCase4(String arg) {
         Assertions.assertFalse(arg.isEmpty());
     }
@@ -35,18 +37,20 @@ public class CalculatorParameterizedTest {
         return new String[]{"Java", "JS", "TS"};
     }
 
+
+
     @ParameterizedTest
     @CsvSource({
             "10, 20, 30",
             "20, 20, 40",
-            "30, 20, 100"
+            "30, 20, 50"
     })
     void testCase5(int num1, int num2, int result) {
         Assertions.assertEquals(result, Calculator.add(num1, num2));
     }
 
     @ParameterizedTest
-    @CsvFileSource(resources = "/sample-data.csv", numLinesToSkip = 1)
+    @CsvFileSource(resources = "/sample-data.csv", numLinesToSkip = 1)  //numLinesToSkip - define how many lines to skip in the file while performing the test
     void testCase6(int num1, int num2, int result) {
         Assertions.assertEquals(result, Calculator.add(num1, num2));
     }
